@@ -1,0 +1,4 @@
+export const environment = {
+  tmdb_api_key: '',
+  production: false,
+};
