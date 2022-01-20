@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
+import { environment } from './../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,7 @@ export class AppComponent {
   constructor(private http: HttpClient) {}
 
   getData(){
-    const url ='https://httpbin.org/get'
+    const url =` https://api.themoviedb.org/3/movie/550?api_key=${environment.TMDB_API_KEY}`
     this.http.get(url).subscribe((res)=>{
       this.data = res
       console.log(this.data)
