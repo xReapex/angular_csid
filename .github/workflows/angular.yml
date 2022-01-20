@@ -16,6 +16,6 @@ jobs:
       - name: Install depedencies
         run: |
           npm install
-      - name: Starting Angular App
+      - name: Building Angular App
         run: |
-          npm run start
+          npm run build
