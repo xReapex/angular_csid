@@ -1,7 +1,4 @@
 export const environment = {
+  tmdb_api_key: 'fe8a03499179c3db4bb693fe5da719ec',
   production: false,
 };
-
-export const TMDB_API_KEY = {
-  TMDB_API_KEY: 'fe8a03499179c3db4bb693fe5da719ec'
-}
