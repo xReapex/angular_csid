@@ -18,4 +18,4 @@ jobs:
           npm install
       - name: Building Angular App
         run: |
-          npm run build --dev
+          npm run build
