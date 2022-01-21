@@ -15,8 +15,9 @@ export class AppComponent {
   getData(){
     const url = `https://api.themoviedb.org/3/movie/550?api_key=${environment.tmdb_api_key}`
     this.http.get(url).subscribe((res)=>{
-      this.data = res
-      return this.data
+      this.data = res;
+      console.log(this.data);
+      return this.data;
     })
   }
 }
