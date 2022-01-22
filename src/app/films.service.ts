@@ -14,8 +14,8 @@ export class FilmsService {
   constructor(private http: HttpClient) {}
 
   // Available data
-  public allFilmsByName:any = []
-  public filmById:any = []
+  public allFilmsByName:any = [];
+  public filmById:any = [];
 
   // Request API with endpoint
   private requestAPI(endpoint: string)
@@ -28,13 +28,11 @@ export class FilmsService {
   /**
   * Functions related to movies
   */
-  getFilmsByName(name: string)
-  {
+  getFilmsByName(name: string) {
     this.allFilmsByName = this.requestAPI(`/search/movie/&query=${name}`);
   }
 
-  getFilmById(id: number)
-  {
+  getFilmById(id: number) {
     this.filmById = this.requestAPI(`/movie/${id}`);
   }
 }
