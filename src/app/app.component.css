@@ -1,0 +1,107 @@
+/* Rectangle 1 */
+
+.backgroundCard
+{
+position: absolute;
+width: 262px;
+height: 378px;
+background: #0F0068;
+}
+
+
+/* AFFICHE DU FIL */
+.moviePoster
+{
+position: absolute;
+width: 190px;
+height: 201px;
+
+background: #C4C4C4;
+}
+
+/* TITRE */
+
+.titleCard
+{
+position: absolute;
+width: 49px;
+height: 21px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+
+color: #FFFFFF;
+}
+
+
+
+/* Description */
+
+.descriptionCard
+{
+position: absolute;
+width: 92px;
+height: 21px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 21px;
+
+color: #FFFFFF;
+}
+
+
+
+/* Nb vues */
+
+.nbViewsCard
+{
+position: absolute;
+width: 65px;
+height: 21px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 21px;
+
+color: #FFFFFF;
+}
+
+
+
+/* Note */
+
+.noteCard
+{
+position: absolute;
+width: 39px;
+height: 21px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 21px;
+
+color: #FFFFFF;
+}
+
+
+
+/* Line 1 */
+
+.vert-lineCard
+{
+position: absolute;
+width: 34px;
+height: 0px;
+
+border: 1px solid #FFFFFF;
+transform: rotate(90deg);
+}
