@@ -10,10 +10,10 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       
-      - name: Install NodeJS v16.10
+      - name: Install NodeJS v14.15
         uses: actions/setup-node@v1
         with:
-          node-version: 16.10
+          node-version: 14.15
 
       - name: Install depedencies
         run: |
