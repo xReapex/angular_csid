@@ -19,3 +19,8 @@
 - Installer les dépendances : ``npm install``.
 - Lancer le serveur : ``ng serve``.
 - Ouvrir l'url du [serveur](http://localhost:4200/).
+
+
+# Design card concept :
+(may encounter changes)
+![card](https://user-images.githubusercontent.com/94677184/150654498-619c91a2-e01d-43ec-a259-f4b972401f02.png)
