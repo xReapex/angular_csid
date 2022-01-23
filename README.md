@@ -22,5 +22,12 @@
 
 
 # Design card concept :
-(may encounter changes)
-![card](https://user-images.githubusercontent.com/94677184/150654498-619c91a2-e01d-43ec-a259-f4b972401f02.png)
+(may encounter changes)!
+
+[Capture d’écran 2022-01-23 105346](https://user-images.githubusercontent.com/94677184/150673218-00c6b700-42a6-4b52-8723-2f1897bb2503.png)
+
+
+#TODO :
+- Récupérer l'affiche du film depuis l'API (au lieu de récupérer depuis un lien quelcquonque)
+- Ajouter les logos (cercle et étoile) pour le nombre de vues et la note du film
+- Faire en sorte à ce que la description du film affiche "..." si le texte est trop long
