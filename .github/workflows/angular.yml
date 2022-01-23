@@ -21,3 +21,6 @@ jobs:
       - name: Building Angular App
         run: |
           npm run build
+      - name: Testing
+        run: |
+          npm run test
