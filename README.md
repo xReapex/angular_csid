@@ -19,3 +19,7 @@
 - Installer les dépendances : ``npm install``.
 - Lancer le serveur : ``ng serve``.
 - Ouvrir l'url du [serveur](https://angular-csid.herokuapp.com/).
+
+# Utilisation avec Git :
+
+**Récupérer les changements de master depuis une branche de dev** : ``git pull --rebase origin master``
