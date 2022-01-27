@@ -18,4 +18,8 @@
 - Cloner le répertoire : ``git clone https://github.com/xReapex/angular_csid.git``.
 - Installer les dépendances : ``npm install``.
 - Lancer le serveur : ``ng serve``.
-- Ouvrir l'url du [serveur](https://angular-csid.herokuapp.com/).
+- Ouvrir l'url du [serveur de prod](https://angular-csid.herokuapp.com/) ou du [serveur local](https://localhost:4200).
+
+# Utilisation avec Git :
+
+- **Récupérer les changements de master depuis une branche de dev** : ``git pull --rebase origin master``
