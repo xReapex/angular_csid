@@ -22,4 +22,4 @@
 
 # Utilisation avec Git :
 
-- **Récupérer les changements de master depuis une branche de dev** : ``git pull --rebase origin master``
+- **Récupérer les changements de master depuis une branche de dev** : ``git merge origin/master ``
