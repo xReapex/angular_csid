@@ -18,8 +18,19 @@
 - Cloner le répertoire : ``git clone https://github.com/xReapex/angular_csid.git``.
 - Installer les dépendances : ``npm install``.
 - Lancer le serveur : ``ng serve``.
+- Ouvrir l'url du [serveur](http://localhost:4200/).
+
+# Design card concept :
+(may encounter changes)!
+
+![image](https://user-images.githubusercontent.com/94677184/151341409-0066a061-24a6-435e-8888-fbffe876502b.png)
+
 - Ouvrir l'url du [serveur de prod](https://angular-csid.herokuapp.com/) ou du [serveur local](https://localhost:4200).
 
 # Utilisation avec Git :
 
 - **Récupérer les changements de master depuis une branche de dev** : ``git merge origin/master ``
+
+# TODO :
+- Formater la date jj/mm/aa
+- Ajouter la mention "minutes" au Runtime
