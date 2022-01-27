@@ -16,6 +16,8 @@ export class FilmsService {
   // Available data
   public allFilmsByName:any = [];
   public filmById:any = [];
+  public discoverMovies:any = [];
+  public filmsWithGenre:any = [];
 
   // Request API with endpoint
   private requestAPI(endpoint: string)
@@ -34,5 +36,13 @@ export class FilmsService {
 
   getFilmById(id: number) {
     this.filmById = this.requestAPI(`/movie/${id}`);
+  }
+
+  getDiscoverFilms() {
+    this.discoverMovies = this.requestAPI('/discover/movie');
+  }
+
+  getFilmsWithGenre(genre: string) {
+    this.filmsWithGenre = this.requestAPI(`/discover/movie&with_genres=${genre}`);
   }
 }
