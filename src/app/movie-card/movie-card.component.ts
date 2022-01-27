@@ -12,12 +12,10 @@ export class MovieCardComponent implements OnInit {
   public data:any = [this.getData()]
   constructor(private http: HttpClient) {}
 
-
   ngOnInit(): void {
     throw new Error('Method not implemented.');
   }
 
-  
   getData(){
     const url = `https://api.themoviedb.org/3/movie/532?api_key=${environment.tmdb_api_key}`
     this.http.get(url).subscribe((res)=>{
