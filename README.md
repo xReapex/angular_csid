@@ -17,6 +17,7 @@
 
 - Cloner le répertoire : ``git clone https://github.com/xReapex/angular_csid.git``.
 - Installer les dépendances : ``npm install``.
+- Compiler le CSS : ``npx tailwindcss -i ./src/styles.css -o ./dist/output.css --watch``.
 - Lancer le serveur : ``ng serve``.
 - Ouvrir l'url du [serveur de prod](https://angular-csid.herokuapp.com/) ou du [serveur local](https://localhost:4200).
 
