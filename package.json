@@ -2,6 +2,7 @@
   "name": "angular-csid",
   "version": "0.0.0",
   "scripts": {
+    "build-tw": "npx tailwindcss -i ./src/styles.css -o ./dist/output.css --watch",
     "ng": "ng",
     "start": "node server.js",
     "build": "ng build",
