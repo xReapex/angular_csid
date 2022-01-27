@@ -25,3 +25,7 @@
 (may encounter changes)!
 
 ![image](https://user-images.githubusercontent.com/94677184/151341409-0066a061-24a6-435e-8888-fbffe876502b.png)
+
+# TODO :
+- Formater la date jj/mm/aa
+- Ajouter la mention "minutes" au Runtime
