@@ -2,9 +2,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-#checkbox:checked+label .switch-ball {
-    background-color: white;
-    transform: translateX(24px);
-    transition: transform 0.3s linear;
-}
