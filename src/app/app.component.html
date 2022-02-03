@@ -1,7 +1,27 @@
 <app-navbar></app-navbar>
-<p> Movie name : {{ movieName }} </p>
-<p> Overview : {{ overview }} </p>
-<p> Overral note : {{ overralNote }} </p>
-<p> Genre : {{ genre }} </p>
 
-<p> discoveredFilms : {{ discoveredMovies[0].results[0].original_title }} </p>
+<section>
+    <div class="container px-6 py-20 mx-auto">
+
+        <h1 class="text-3xl mb-2 font-bold leading-normal ">
+            Discover Movies :
+        </h1>
+
+        <div class="flex flex-wrap -m-4">   
+
+            <div class="p-4 md:w-1/4">
+                <app-movie-card movieTitle="{{ discoveredMovies[0].results[0].original_title }}" overviewMovie="{{ discoveredMovies[0].results[0].overview }}" date="{{ discoveredMovies[0].results[0].release_date}}" note="{{ discoveredMovies[0].results[0].vote_average}}" runtime="{{ discoveredMovies[0].results[0].runtime}}" poster="{{ discoveredMovies[0].results[0].poster_path}}"></app-movie-card>  
+            </div>
+            <div class="p-4 md:w-1/4">  
+                <app-movie-card movieTitle="{{ discoveredMovies[0].results[1].original_title }}" overviewMovie="{{ discoveredMovies[0].results[1].overview }}" date="{{ discoveredMovies[0].results[1].release_date}}" note="{{ discoveredMovies[0].results[1].vote_average}}" runtime="{{ discoveredMovies[0].results[1].runtime}}" poster="{{ discoveredMovies[0].results[1].poster_path}}"></app-movie-card>
+            </div>
+            <div class="p-4 md:w-1/4">
+                <app-movie-card movieTitle="{{ discoveredMovies[0].results[2].original_title }}" overviewMovie="{{ discoveredMovies[0].results[2].overview }}" date="{{ discoveredMovies[0].results[2].release_date}}" note="{{ discoveredMovies[0].results[2].vote_average}}" runtime="{{ discoveredMovies[0].results[2].runtime}}" poster="{{ discoveredMovies[0].results[2].poster_path}}"></app-movie-card>
+            </div>
+            <div class="p-4 md:w-1/4">
+                <app-movie-card movieTitle="{{ discoveredMovies[0].results[3].original_title }}" overviewMovie="{{ discoveredMovies[0].results[3].overview }}" date="{{ discoveredMovies[0].results[3].release_date}}" note="{{ discoveredMovies[0].results[3].vote_average}}" runtime="{{ discoveredMovies[0].results[3].runtime}}" poster="{{ discoveredMovies[0].results[3].poster_path}}"></app-movie-card>
+            </div>
+        </div>
+    </div>
+</section>
+
