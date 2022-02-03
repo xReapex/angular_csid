@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { MovieCardComponent } from './component/movie-card/movie-card.component';
 import { NavbarComponent } from './component/navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AutocompleteLibModule } from 'angular-ng-autocomplete';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AutocompleteLibModule
   ],
   providers: [],
   bootstrap: [AppComponent]
