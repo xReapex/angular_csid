@@ -14,7 +14,16 @@ export class NavbarComponent implements OnInit {
 
   placeholder = 'Search Movies'
   keyword = 'name';
-  data = [];
+  data = [
+    {
+      id: 1,
+      'name': 'exemple'
+    },
+    {
+      id: 2,
+      'name': 'exemple2'
+    },
+  ];
 
 
   selectEvent(item: any) {
