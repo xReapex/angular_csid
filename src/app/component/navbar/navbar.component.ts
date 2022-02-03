@@ -12,4 +12,31 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  placeholder = 'Search Movies'
+  keyword = 'name';
+  data = [
+    {
+      id: 1,
+      'name': 'exemple'
+    },
+    {
+      id: 2,
+      'name': 'exemple2'
+    },
+  ];
+
+
+  selectEvent(item: any) {
+    // do something with selected item
+  }
+
+  onChangeSearch(val: string) {
+    // fetch remote data from here
+    // And reassign the 'data' which is binded to 'data' property.
+  }
+  
+  onFocused(e: any){
+    // do something when input is focused
+  }
+
 }
