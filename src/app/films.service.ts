@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { environment } from './../environments/environment';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -30,7 +31,7 @@ export class FilmsService {
   /**
   * Functions related to movies
   */
-  getFilmsByName(name: string) {
+  /*getFilmsByName(name: string) {
     this.allFilmsByName = this.requestAPI(`/search/movie/&query=${name}`);
   }
 
@@ -44,5 +45,17 @@ export class FilmsService {
 
   getFilmsWithGenre(genre: string) {
     this.filmsWithGenre = this.requestAPI(`/discover/movie&with_genres=${genre}`);
+  }*/
+
+
+  getFilmDataById(id: string): Observable<any> {
+    let url = "https://api.themoviedb.org/3/movie/" + id + "?api_key=fe8a03499179c3db4bb693fe5da719ec";
+    return this.http.get(url);
   }
+
+  getDiscoverFilmsData(): Observable<any> {
+    let url = "https://api.themoviedb.org/3/discover/movie?api_key=fe8a03499179c3db4bb693fe5da719ec";
+    return this.http.get(url);
+  }
+  
 }
