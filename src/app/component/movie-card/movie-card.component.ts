@@ -23,6 +23,8 @@ export class MovieCardComponent implements OnInit {
   runtime: string | undefined;
   @Input()
   poster: string | undefined;
+  @Input()
+  homepage: string | undefined;
 
   public title = 'TMDB API w/Angular';
   public data:any = [this.getData()]

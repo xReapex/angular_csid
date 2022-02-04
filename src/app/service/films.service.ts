@@ -60,5 +60,10 @@ export class FilmsService {
     let url = "https://api.themoviedb.org/3/discover/movie?api_key=fe8a03499179c3db4bb693fe5da719ec";
     return this.http.get(url);
   }
+
+  getDiscoverFilmsMissingDataById(discoveredMoviesMissingData: string): Observable<any> {
+    //Get missing datas : runtime, homepage link and genre
+    return this.getFilmDataById(discoveredMoviesMissingData);
+  }
   
 }
