@@ -16,6 +16,7 @@ export class AppComponent {
   public genre: any;
 
   public discoveredMovies: any = [];
+  public discoveredMoviesMissingData: any = [];
 
   constructor(private appService : FilmsService ) {}
 
@@ -33,10 +34,20 @@ export class AppComponent {
     });
 
     this.appService.getDiscoverFilmsData().subscribe(response =>{
+      let movieAmount = 4;
       this.discoveredMovies.push(response);
+
+      for(let index = 0; index < movieAmount; index++) {
+          this.appService.getDiscoverFilmsMissingDataById(response['results'][index]['id']).subscribe(responseMissingData =>{
+          this.discoveredMoviesMissingData.push(responseMissingData);
+        });
+      }
+
+      this.discoveredMovies.push(this.discoveredMoviesMissingData);
       console.log(this.discoveredMovies);
 
   });
+
 
 
 }
