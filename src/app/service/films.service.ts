@@ -24,46 +24,37 @@ export class FilmsService {
   public filmsWithGenre:any = [];
 
   // Request API with endpoint
-  private requestAPI(endpoint: string)
+  private requestAPI(endpoint: string, query?: string)
   {
-    this.http.get(`${this.baseUrl}${endpoint}?api_key=${environment.tmdb_api_key}`).subscribe((res)=>{
-      return res;
-    });
+    if(typeof query !== 'undefined')
+    {
+      return this.http.get(`${this.baseUrl}${endpoint}?api_key=${environment.tmdb_api_key}${query}`);
+    }
+    return this.http.get(`${this.baseUrl}${endpoint}?api_key=${environment.tmdb_api_key}`);
   }
 
   /**
   * Functions related to movies
   */
-  /*getFilmsByName(name: string) {
-    this.allFilmsByName = this.requestAPI(`/search/movie/&query=${name}`);
-  }
-
-  getFilmById(id: number) {
-    this.filmById = this.requestAPI(`/movie/${id}`);
-  }
-
-  getDiscoverFilms() {
-    this.discoverMovies = this.requestAPI('/discover/movie');
-  }
-
-  getFilmsWithGenre(genre: string) {
-    this.filmsWithGenre = this.requestAPI(`/discover/movie&with_genres=${genre}`);
-  }*/
-
-
   getFilmDataById(id: string): Observable<any> {
-    let url = "https://api.themoviedb.org/3/movie/" + id + "?api_key=fe8a03499179c3db4bb693fe5da719ec";
-    return this.http.get(url);
+    return this.requestAPI(`/movie/${id}`);
   }
 
   getDiscoverFilmsData(): Observable<any> {
-    let url = "https://api.themoviedb.org/3/discover/movie?api_key=fe8a03499179c3db4bb693fe5da719ec";
-    return this.http.get(url);
+    return this.requestAPI('/discover/movie');
   }
 
-  getDiscoverFilmsMissingDataById(discoveredMoviesMissingData: string): Observable<any> {
+  getDiscoverFilmsMissingDataById(movieId: string): Observable<any> {
     //Get missing datas : runtime, homepage link and genre
-    return this.getFilmDataById(discoveredMoviesMissingData);
+    return this.getFilmDataById(movieId);
   }
   
+  getFilmsByName(name: string) {
+    return this.requestAPI("/search/movie", `&query=${name}`);
+  }
+
+  getFilmsWithGenre(genre: string) {
+    return this.requestAPI("/discover/movie", `&with_genres=${genre}`);
+  }
+ 
 }
