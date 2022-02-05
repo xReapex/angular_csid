@@ -8,12 +8,14 @@ import { MovieCardComponent } from './component/movie-card/movie-card.component'
 import { NavbarComponent } from './component/navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AutocompleteLibModule } from 'angular-ng-autocomplete';
+import { VertNavbarComponent } from './component/vert-navbar/vert-navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MovieCardComponent,
-    NavbarComponent
+    NavbarComponent,
+    VertNavbarComponent,
   ],
   imports: [
     BrowserModule,
