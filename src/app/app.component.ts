@@ -45,7 +45,6 @@ export class AppComponent {
         });
       }
       this.discoveredMovies.push(this.discoveredMoviesMissingData);
-      console.log(this.discoveredMovies);
     });
 
     this.appService.getFilmsByName("spider").subscribe(response => {
