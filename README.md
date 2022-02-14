@@ -28,7 +28,7 @@
 # Design card concept :
 (may encounter changes)!
 
-![image](https://user-images.githubusercontent.com/94677184/151341409-0066a061-24a6-435e-8888-fbffe876502b.png)
+![image](https://user-images.githubusercontent.com/56170171/153854309-9eb89a9e-8074-4554-a472-85144eb0f56b.png)
 
 # Utilisation avec Git :
 
