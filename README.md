@@ -25,10 +25,10 @@
 
 - **Récupérer les changements de master depuis une branche de dev** : ``git merge origin/master ``
 
-# Design card concept :
+# Design concept :
 (may encounter changes)!
 
-![image](https://user-images.githubusercontent.com/56170171/153854309-9eb89a9e-8074-4554-a472-85144eb0f56b.png)
+![image](https://user-images.githubusercontent.com/94677184/152661594-9be06c04-3d3c-4bfa-a6af-c20526e9590c.png)
 
 # Utilisation avec Git :
 
