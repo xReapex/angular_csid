@@ -28,7 +28,7 @@
 # Design concept :
 (may encounter changes)!
 
-![image](https://user-images.githubusercontent.com/94677184/152661594-9be06c04-3d3c-4bfa-a6af-c20526e9590c.png)
+![image](https://user-images.githubusercontent.com/56170171/153864984-23e9b9fc-d67d-4dc4-8304-04e1a3dd65ed.png)
 
 # Utilisation avec Git :
 
