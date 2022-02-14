@@ -29,7 +29,3 @@
 (may encounter changes)!
 
 ![image](https://user-images.githubusercontent.com/56170171/153864984-23e9b9fc-d67d-4dc4-8304-04e1a3dd65ed.png)
-
-# Utilisation avec Git :
-
-- **Récupérer les changements de master depuis une branche de dev** : ``git merge origin/master ``
