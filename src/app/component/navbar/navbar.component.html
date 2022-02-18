@@ -1,20 +1,4 @@
 
-<script>
-  const checkbox = document.querySelector("#checkbox");
-  const html = document.querySelector("html");
-
-  const toggleDarkMode = function () {
-    checkbox.checked
-    ? html.classList.add("dark")
-    : html.classList.remove("dark");
-  }
-
-//calling the function directly
-
-  toggleDarkMode();
-  checkbox.addEventListener("click",toggleDarkMode);
-
-  </script>
 <header class="text-gray-600; body-font; dark:bg-gray-900">
 
   <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center;">
@@ -37,7 +21,8 @@
 
 
       <div class="form-check form-switch">
-        <button onclick="toggleDarkMode"> 
+        
+          <button (click)='toggleDarkMode()'>
           <svg xmlns="http://www.w3.org/2000/svg" class="dark:fill-gray-200" enable-background="new 0 0 24 24"
             height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">
             <rect fill="none" height="24" width="24" />
