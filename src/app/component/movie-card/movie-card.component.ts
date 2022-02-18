@@ -27,19 +27,9 @@ export class MovieCardComponent implements OnInit {
   homepage: string | undefined;
 
   public title = 'TMDB API w/Angular';
- // public data:any = [this.getData()]
-  constructor(private http: HttpClient) {}
+  constructor() {}
 
   ngOnInit(): void {
-  
+
   }
-/*
-  getData(){
-    const url = `https://api.themoviedb.org/3/movie/532?api_key=${environment.tmdb_api_key}`
-    this.http.get(url).subscribe((res)=>{
-      this.data = res;
-      console.log(this.data);
-      return this.data;
-    })
-  }*/
 }
