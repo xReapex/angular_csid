@@ -1,6 +1,6 @@
 
 import { Component } from '@angular/core';
-import { FilmsService } from './service/films.service';
+import { DiscoverViewComponent } from './views/discover-view/discover-view.component';
 
 @Component({
   selector: 'app-root',
@@ -15,44 +15,9 @@ export class AppComponent {
     public overralNote: any;
     public genre: any;*/
 
-  public discoveredMovies: any = [];
-  public discoveredMoviesMissingData: any = [];
-  public byName: any = [];
-  public byGenre: any = [];
-
-  constructor(private appService: FilmsService) { }
+  constructor() { }
 
   ngOnInit() {
-    let id: string = "510";
-    /*
-        this.appService.getFilmDataById(id).subscribe(response =>{
-            let prod = JSON.stringify(response);
-            //console.log(prod);
     
-            this.movieName = response['original_title'];
-            this.overview = response['overview'];
-            this.overralNote = response['vote_average'];
-            this.genre = response['genres']['0']['name'];
-        });*/
-
-    this.appService.getDiscoverFilmsData().subscribe(response => {
-      let movieAmount = 4;
-      this.discoveredMovies.push(response);
-
-      for (let index = 0; index < movieAmount; index++) {
-        this.appService.getDiscoverFilmsMissingDataById(response['results'][index]['id']).subscribe(responseMissingData => {
-          this.discoveredMoviesMissingData.push(responseMissingData);
-        });
-      }
-      this.discoveredMovies.push(this.discoveredMoviesMissingData);
-    });
-
-    this.appService.getFilmsByName("spider").subscribe(response => {
-      this.byName.push(response);
-    });
-
-    this.appService.getFilmsWithGenre("action").subscribe(response => {
-      this.byGenre.push(response);
-    });
   }
 }
