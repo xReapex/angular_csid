@@ -1,6 +1,6 @@
-import { Component} from '@angular/core';
-import { HttpClient } from "@angular/common/http";
-import { environment } from './../environments/environment';
+
+import { Component } from '@angular/core';
+import { FilmsService } from './service/films.service';
 
 @Component({
   selector: 'app-root',
@@ -9,16 +9,34 @@ import { environment } from './../environments/environment';
 })
 
 export class AppComponent {
-  public title = 'TMDB API w/Angular';
-  public data:any = [this.getData()]
-  constructor(private http: HttpClient) {}
-  
-  getData(){
-    const url = `https://api.themoviedb.org/3/movie/550?api_key=${environment.tmdb_api_key}`
-    this.http.get(url).subscribe((res)=>{
-      this.data = res;
-      console.log(this.data);
-      return this.data;
-    })
+
+  public discoveredMovies: any = [];
+  public discoveredMoviesMissingData: any = [];
+  public byName: any = [];
+  public byGenre: any = [];
+
+  constructor(private appService: FilmsService) { }
+
+  ngOnInit() {
+
+    this.appService.getDiscoverFilmsData().subscribe(response => {
+      let movieAmount = 4;
+      this.discoveredMovies.push(response);
+
+      for (let index = 0; index < movieAmount; index++) {
+        this.appService.getDiscoverFilmsMissingDataById(response['results'][index]['id']).subscribe(responseMissingData => {
+          this.discoveredMoviesMissingData.push(responseMissingData);
+        });
+      }
+      this.discoveredMovies.push(this.discoveredMoviesMissingData);
+    });
+
+    this.appService.getFilmsByName("spider").subscribe(response => {
+      this.byName.push(response);
+    });
+
+    this.appService.getFilmsWithGenre("action").subscribe(response => {
+      this.byGenre.push(response);
+    });
   }
 }

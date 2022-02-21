@@ -1,5 +1,5 @@
 
-<header class="text-gray-600; body-font; dark:bg-gray-900">
+<header class="text-gray-600 body-font">
 
   <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center;">
     <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
@@ -8,20 +8,36 @@
         viewBox="0 0 24 24">
         <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
       </svg>
-      <span class="ml-3 text-xl font-bold; dark:text-gray-200">Movies Catalog</span>
+      <span class="ml-3 text-xl font-bold">Movies Catalog</span>
     </a>
     <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
 
       <!--Ajouter des onglets-->
 
+      <div class="ng-autocomplete">
+        <ng-autocomplete
+          [placeholder]="placeholder"
+          [data]="data"
+          [searchKeyword]="keyword"
+          (selected)='selectEvent($event)'
+          (inputChanged)='onChangeSearch($event)'
+          (inputFocused)='onFocused($event)'
+          [itemTemplate]="itemTemplate"
+          [notFoundTemplate]="notFoundTemplate">
+        </ng-autocomplete>
+
+        <ng-template #itemTemplate let-item>
+        <a [innerHTML]="item.name"></a>
+        </ng-template>
+
+        <ng-template #notFoundTemplate let-notFound>
+        <div [innerHTML]="notFound"></div>
+        </ng-template>
+        </div>
+
     </nav>
 
     <div class="form-check form-switch">
-
-
-
-      <div class="form-check form-switch">
-        
           <button (click)='toggleDarkMode()'>
           <svg xmlns="http://www.w3.org/2000/svg" class="dark:fill-gray-200" enable-background="new 0 0 24 24"
             height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">
@@ -31,8 +47,6 @@
           </svg>
         </button>
       </div>
-
-    </div>
   </div>
 
 
