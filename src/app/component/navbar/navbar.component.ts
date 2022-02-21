@@ -33,7 +33,7 @@ export class NavbarComponent implements OnInit {
       localStorage.setItem('html', 'light');
       html.classList.remove("dark");
 
-    } else if (localStorage.getItem('data-theme') == "light"){
+    } else {
       localStorage.setItem('data-theme', 'dark');
       localStorage.setItem('html', 'dark');
       html.classList.add("dark");
