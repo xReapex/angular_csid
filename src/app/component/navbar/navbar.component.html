@@ -1,7 +1,11 @@
+
 <header class="text-gray-600 body-font">
-  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+
+  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center;">
     <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-red-500 rounded-full" viewBox="0 0 24 24">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
+        stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-red-500 rounded-full"
+        viewBox="0 0 24 24">
         <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
       </svg>
       <span class="ml-3 text-xl font-bold">Movies Catalog</span>
@@ -11,7 +15,7 @@
       <!--Ajouter des onglets-->
 
       <div class="ng-autocomplete">
-        <ng-autocomplete 
+        <ng-autocomplete
           [placeholder]="placeholder"
           [data]="data"
           [searchKeyword]="keyword"
@@ -19,22 +23,31 @@
           (inputChanged)='onChangeSearch($event)'
           (inputFocused)='onFocused($event)'
           [itemTemplate]="itemTemplate"
-          [notFoundTemplate]="notFoundTemplate">                                 
+          [notFoundTemplate]="notFoundTemplate">
         </ng-autocomplete>
-        
+
         <ng-template #itemTemplate let-item>
         <a [innerHTML]="item.name"></a>
         </ng-template>
-        
+
         <ng-template #notFoundTemplate let-notFound>
         <div [innerHTML]="notFound"></div>
         </ng-template>
         </div>
 
     </nav>
+
     <div class="form-check form-switch">
-      <input class="form-check-input appearance-none w-9 -ml-10 rounded-full float-left h-5 align-top bg-white bg-no-repeat bg-contain bg-gray-300 focus:outline-none cursor-pointer shadow-sm" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-      <label class="form-check-label inline-block text-gray-800" for="flexSwitchCheckDefault">Dark</label>
-    </div>
+          <button (click)='toggleDarkMode()'>
+          <svg xmlns="http://www.w3.org/2000/svg" class="dark:fill-gray-200" enable-background="new 0 0 24 24"
+            height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">
+            <rect fill="none" height="24" width="24" />
+            <path
+              d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z" />
+          </svg>
+        </button>
+      </div>
   </div>
+
+
 </header>
