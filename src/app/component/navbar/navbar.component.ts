@@ -1,3 +1,4 @@
+import { HtmlParser } from '@angular/compiler';
 import { Component, EventEmitter, Input, OnInit, Output, } from '@angular/core';
 
 @Component({
@@ -7,42 +8,37 @@ import { Component, EventEmitter, Input, OnInit, Output, } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  @Input()  event:any
+  @Input() event: any
   @Output() Emitter = new EventEmitter();
   constructor() { }
 
-  //const checkbox = document.querySelector("#checkbox");
-  //html = document.getElementsByTagName("html");
- 
-
   ngOnInit(): void {
+    let html = document.getElementsByTagName('html')[0]
 
-   
+
+    if (localStorage.getItem('data-theme') == "dark"){
+      html.classList.add("dark")
+    } else {
+      html.classList.remove("dark")
+    }
+  }
+
+
+  toggleDarkMode() {
+
+    let html = document.getElementsByTagName('html')[0]
+
+    if (localStorage.getItem('data-theme') == "dark") {      
+      localStorage.setItem('data-theme', 'light');
+      localStorage.setItem('html', 'light');
+      html.classList.remove("dark");
+
+    } else if (localStorage.getItem('data-theme') == "light"){
+      localStorage.setItem('data-theme', 'dark');
+      localStorage.setItem('html', 'dark');
+      html.classList.add("dark");
+    }
+  }
 
 }
-
-
-
-toggleDarkMode() {
-
-  console.log("dark mode");
-  
-  let html = document.getElementsByTagName('html')[0]
-    if(html.classList.contains("dark")){
-      html.classList.remove("dark");
-    } else {
-     html.classList.add("dark");
-    }
-   // checkbox.checked
-    //? html.classList.add("dark")      
-    //: html.classList.remove("dark");
-    this.Emitter.emit(event);
-  }
-
-//calling the function directly
-
-  //toggleDarkMode();
-  //checkbox.addEventListener("click",toggleDarkMode);
-  
-  }
 
