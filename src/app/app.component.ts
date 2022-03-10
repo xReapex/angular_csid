@@ -9,15 +9,11 @@ import { DiscoverViewComponent } from './views/discover-view/discover-view.compo
 })
 
 export class AppComponent {
-  /*
-    public movieName: any;
-    public overview: any;
-    public overralNote: any;
-    public genre: any;*/
 
   constructor() { }
 
   ngOnInit() {
-    
+
+
   }
 }
