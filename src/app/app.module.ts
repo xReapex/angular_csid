@@ -12,6 +12,8 @@ import { VertNavbarComponent } from './component/vert-navbar/vert-navbar.compone
 import { DiscoverViewComponent } from './views/discover-view/discover-view.component';
 import { HomepageViewComponent } from './views/homepage-view/homepage-view.component';
 import { SearchViewComponent } from './views/search-view/search-view.component';
+import { HomepageFeaturedComponent } from './views/homepage-view/homepage-featured/homepage-featured.component';
+import { HomepageSuggestionsComponent } from './views/homepage-view/homepage-suggestions/homepage-suggestions.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { SearchViewComponent } from './views/search-view/search-view.component';
     VertNavbarComponent,
     DiscoverViewComponent,
     HomepageViewComponent,
-    SearchViewComponent
+    SearchViewComponent,
+    HomepageFeaturedComponent,
+    HomepageSuggestionsComponent
   ],
   imports: [
     BrowserModule,

@@ -8,10 +8,10 @@ import { FilmsService } from 'src/app/service/films.service';
 })
 export class SearchViewComponent implements OnInit {
 
+  public byName: any = [];
+
   @Input()
   movieId: any | undefined;
-
-
 
   @Input()
   movieTitle: string | undefined;
