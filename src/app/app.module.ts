@@ -9,6 +9,11 @@ import { NavbarComponent } from './component/navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AutocompleteLibModule } from 'angular-ng-autocomplete';
 import { VertNavbarComponent } from './component/vert-navbar/vert-navbar.component';
+import { DiscoverViewComponent } from './views/discover-view/discover-view.component';
+import { HomepageViewComponent } from './views/homepage-view/homepage-view.component';
+import { SearchViewComponent } from './views/search-view/search-view.component';
+import { HomepageFeaturedComponent } from './views/homepage-view/homepage-featured/homepage-featured.component';
+import { HomepageSuggestionsComponent } from './views/homepage-view/homepage-suggestions/homepage-suggestions.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +21,11 @@ import { VertNavbarComponent } from './component/vert-navbar/vert-navbar.compone
     MovieCardComponent,
     NavbarComponent,
     VertNavbarComponent,
+    DiscoverViewComponent,
+    HomepageViewComponent,
+    SearchViewComponent,
+    HomepageFeaturedComponent,
+    HomepageSuggestionsComponent
   ],
   imports: [
     BrowserModule,
