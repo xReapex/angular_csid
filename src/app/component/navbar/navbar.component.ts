@@ -30,17 +30,15 @@ export class NavbarComponent implements OnInit {
 
   searchMovie()
   {
-
     this.router.navigateByUrl('/search', { skipLocationChange: true }).then(() => {
       this.router.navigate(['SearchViewComponent']);
-  }); 
+  });
 
   }
 
   toggleDarkMode() {
 
     let html = document.getElementsByTagName('html')[0]
-
     if (localStorage.getItem('data-theme') == "dark") {
       localStorage.setItem('data-theme', 'light');
       localStorage.setItem('html', 'light');
