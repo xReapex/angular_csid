@@ -13,7 +13,6 @@ export class DiscoverViewComponent implements OnInit {
   public byName: any = [];
   public byGenre: any = [];
 
-
   constructor(private appService: FilmsService) { }
 
   ngOnInit() {
@@ -35,8 +34,5 @@ export class DiscoverViewComponent implements OnInit {
       this.byName.push(response);
     });
 
-    this.appService.getFilmsWithGenre("action").subscribe(response => {
-      this.byGenre.push(response);
-    });
   }
 }

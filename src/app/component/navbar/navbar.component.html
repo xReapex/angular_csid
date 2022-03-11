@@ -13,31 +13,51 @@
 
     <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
 
+
       <!--Ajouter des onglets-->
 
+      <div ng-controller="Cntrl as cntrl">
+        
+        <div class="ng-autocomplete">
+          <ng-autocomplete
+          ng-model="cntrl.selectedValue"
+            [placeholder]="placeholder"
+            [data]="data"
+            [searchKeyword]="keyword"
+            (selected)='selectEvent($event)'
+            (inputChanged)='onChangeSearch($event)'
+            (inputFocused)='onFocused($event)'
+            [itemTemplate]="itemTemplate"
+            [notFoundTemplate]="notFoundTemplate" >
+          </ng-autocomplete>
+  
+          <ng-template #itemTemplate let-item>
+          <a [innerHTML]="item.name"></a>
+          </ng-template>
+  
+          <ng-template #notFoundTemplate let-notFound>
+          <div [innerHTML]="notFound"></div>
+          </ng-template>
+          </div>
 
-      <div class="ng-autocomplete">
-        <ng-autocomplete
-          [placeholder]="placeholder"
-          [data]="data"
-          [searchKeyword]="keyword"
-          (selected)='selectEvent($event)'
-          (inputChanged)='onChangeSearch($event)'
-          (inputFocused)='onFocused($event)'
-          [itemTemplate]="itemTemplate"
-          [notFoundTemplate]="notFoundTemplate" >
-        </ng-autocomplete>
+      </div>
 
-        <ng-template #itemTemplate let-item>
-        <a [innerHTML]="item.name"></a>
-        </ng-template>
 
-        <ng-template #notFoundTemplate let-notFound>
-        <div [innerHTML]="notFound"></div>
-        </ng-template>
-        </div>
 
+        <a routerLinkActive="active" routerLink="/search">
+          <button (click)='searchMovie()' class="flex items-center justify-center px-4 border-l"> 
+            <svg class="w-6 h-6 text-gray-600" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24">
+                <path
+                    d="M16.32 14.9l5.39 5.4a1 1 0 0 1-1.42 1.4l-5.38-5.38a8 8 0 1 1 1.41-1.41zM10 16a6 6 0 1 0 0-12 6 6 0 0 0 0 12z" />
+            </svg>
+        </button>
+        </a>
+
+  
     </nav>
+
+
 
     <div class="form-check form-switch">
           <button (click)='toggleDarkMode()'>

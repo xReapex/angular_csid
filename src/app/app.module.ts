@@ -11,6 +11,7 @@ import { AutocompleteLibModule } from 'angular-ng-autocomplete';
 import { VertNavbarComponent } from './component/vert-navbar/vert-navbar.component';
 import { DiscoverViewComponent } from './views/discover-view/discover-view.component';
 import { HomepageViewComponent } from './views/homepage-view/homepage-view.component';
+import { SearchViewComponent } from './views/search-view/search-view.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HomepageViewComponent } from './views/homepage-view/homepage-view.compo
     NavbarComponent,
     VertNavbarComponent,
     DiscoverViewComponent,
-    HomepageViewComponent
+    HomepageViewComponent,
+    SearchViewComponent
   ],
   imports: [
     BrowserModule,

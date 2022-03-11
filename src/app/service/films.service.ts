@@ -23,6 +23,8 @@ export class FilmsService {
   public discoverMovies:any = [];
   public filmsWithGenre:any = [];
 
+  public movieIdToSearch: any | undefined;
+
   // Request API with endpoint
   private requestAPI(endpoint: string, query?: string)
   {
@@ -55,6 +57,17 @@ export class FilmsService {
 
   getFilmsWithGenre(genre: string) {
     return this.requestAPI("/discover/movie", `&with_genres=${genre}`);
+  }
+
+  setMovieToSearch(id: number)
+  {
+    this.movieIdToSearch = id;
+    console.log("received : " + this.movieIdToSearch);
+  }
+
+  getMovieToSearch()
+  {
+    return this.movieIdToSearch;
   }
  
 }

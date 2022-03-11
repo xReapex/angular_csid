@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output, } from '@angular/core';
+import { Router } from '@angular/router';
 import { FilmsService } from './../../service/films.service';
 
 @Component({
@@ -7,7 +8,7 @@ import { FilmsService } from './../../service/films.service';
   styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent implements OnInit {
-  constructor(private filmsService: FilmsService) {}
+  constructor(private filmsService: FilmsService, private router: Router) {}
 
   placeholder = 'Search Movies';
   keyword = 'name';
@@ -27,6 +28,14 @@ export class NavbarComponent implements OnInit {
     }
   }
 
+  searchMovie()
+  {
+
+    this.router.navigateByUrl('/search', { skipLocationChange: true }).then(() => {
+      this.router.navigate(['SearchViewComponent']);
+  }); 
+
+  }
 
   toggleDarkMode() {
 
@@ -46,6 +55,9 @@ export class NavbarComponent implements OnInit {
 
   selectEvent(item: any) {
     // do something with selected item
+
+    console.log(item.movieId);
+    this.filmsService.setMovieToSearch(item.movieId);
   }
 
   onChangeSearch(val: string) {
@@ -62,7 +74,8 @@ export class NavbarComponent implements OnInit {
         for (const film of this.resultsRequest[0]['results']) {
           this.data.push({
             id: i,
-            name: film["title"]
+            name: film["title"],
+            movieId: film["id"]
           })
           i++;
         }
