@@ -8,7 +8,7 @@
         viewBox="0 0 24 24">
         <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
       </svg>
-      <span class="ml-3 text-xl font-bold dark:text-gray-200">Movies Catalog</span>
+      <span class="ml-3 text-xl font-bold dark:text-gray-200">Moviz</span>
     </a>
 
     <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
@@ -17,7 +17,7 @@
       <!--Ajouter des onglets-->
 
       <div ng-controller="Cntrl as cntrl">
-        
+
         <div class="ng-autocomplete">
           <ng-autocomplete
           ng-model="cntrl.selectedValue"
@@ -30,11 +30,11 @@
             [itemTemplate]="itemTemplate"
             [notFoundTemplate]="notFoundTemplate" >
           </ng-autocomplete>
-  
+
           <ng-template #itemTemplate let-item>
           <a [innerHTML]="item.name"></a>
           </ng-template>
-  
+
           <ng-template #notFoundTemplate let-notFound>
           <div [innerHTML]="notFound"></div>
           </ng-template>
@@ -45,7 +45,7 @@
 
 
         <a routerLinkActive="active" routerLink="/search">
-          <button (click)='searchMovie()' class="flex items-center justify-center px-4 border-l"> 
+          <button (click)='searchMovie()' class="flex items-center justify-center px-4 border-l">
             <svg class="w-6 h-6 text-gray-600" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24">
                 <path
@@ -54,7 +54,7 @@
         </button>
         </a>
 
-  
+
     </nav>
 
 
